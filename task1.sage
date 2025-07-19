@@ -66,6 +66,7 @@ def check_common_codeword_binary_goppa(m=6, t=2):
                 S_A = sum([v[i] / (x - A[i]) for i in range(len(A)) if v[i] != 0]).mod(g)
                 S_B = sum([v[i] / (x - B[i]) for i in range(len(B)) if v[i] != 0]).mod(g)
                 count +=1
+                print("  Weigh a:" , v.hamming_weight()) 
                 print("   Syndrome over A:", S_A == 0)
                 print("   Syndrome over B:", S_B == 0)
             #return True
